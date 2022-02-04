@@ -1,0 +1,20 @@
+.series_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 230px);
+    gap: 40px;
+    padding: 40px;
+    justify-content: center;
+    
+    margin-right: 15%;
+    margin-left: 15%;
+  
+  }.header_series{
+    margin-left: 50px;
+    
+  }
+  
+  @media (max-width: 560px) {
+    .series_grid {
+      grid-template-columns: 100%;
+    }
+  }

@@ -1,0 +1,18 @@
+.leter_container{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 50px;
+width: 100%;
+list-style: none;
+}
+
+.leter_button{
+    text-align: center;
+   
+    margin-left: 5px;
+    background-color: rgb(164, 161, 167);
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
