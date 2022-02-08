@@ -1,14 +1,13 @@
-.spinner{
-    display: flex;
-    justify-content: center;
-
+.spinner {
+  display: flex;
+  justify-content: center;
 }
 
-.spinning{
-    animation: spinner 1s linear infinite;
+.spinning {
+  animation: spinner 1s linear infinite;
 }
 @keyframes spinner {
-    to{
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }

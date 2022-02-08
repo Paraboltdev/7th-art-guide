@@ -1,56 +1,46 @@
-import React, { useEffect, useState } from 'react'
-import { peticion } from './utils/peticion'
-import './seriesGrid.css'
-import { Cards } from './Cards'
-import { SeriesCard } from './SeriesCard'
+import React, { useEffect, useState } from "react";
+import { peticion } from "./utils/peticion";
+import "./seriesGrid.css";
+import { Cards } from "./Cards";
+import { SeriesCard } from "./SeriesCard";
 
-export  function LatestList() {
+export function LatestList() {
+  const [movies, setMovies] = useState([]);
+  const [series, setSeries] = useState([]);
 
-    const[movies, setMovies]=useState([])
-    const [series,setSeries] =useState([])
-    
-    
-    useEffect(()=>{
-        peticion('/discover/movie')
-        .then((data) =>{
-            console.log(data)
-            setMovies(data.results)
-           
-        })
+  useEffect(() => {
+    peticion("/discover/movie").then((data) => {
+      console.log(data);
+      setMovies(data.results);
+    });
+  }, []);
 
-    },[])
-
-    useEffect(()=>{
-        peticion('/discover/tv')
-        .then((data) =>{
-            console.log(data)
-            setSeries(data.results)
-            
-        })
-
-    },[])
-    return (
-        <>
-        <div>
-        <h1 className='header'>Movies</h1>
-        <ul className='series_grid'>
-            {movies.map((movie) =>(
-                <Cards key={movie.id} movie={movie} />
-            ))}
+  useEffect(() => {
+    peticion("/discover/tv").then((data) => {
+      console.log(data);
+      setSeries(data.results);
+    });
+  }, []);
+  return (
+    <>
+      <div>
+        <h1 className="header">Movies</h1>
+        <ul className="series_grid">
+          {movies.map((movie) => (
+            <Cards key={movie.id} movie={movie} />
+          ))}
         </ul>
+      </div>
 
-        </div>
-        
-         <div>
-         <h1 className='header'>Series</h1>
+      <div>
+        <h1 className="header">Series</h1>
 
-        <ul className='series_grid'>
-            {series.map((serie) =>(
-                <SeriesCard key={serie.id} serie={serie} />
-            ))}
+        <ul className="series_grid">
+          {series.map((serie) => (
+            <SeriesCard key={serie.id} serie={serie} />
+          ))}
         </ul>
-         </div>       
-
-        </>
-    )
+      </div>
+    </>
+  );
 }

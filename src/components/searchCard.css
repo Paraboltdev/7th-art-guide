@@ -1,22 +1,20 @@
 .searchCard {
-    list-style: none;
-    font-size: 1.5rem;
-    text-align: center;
+  list-style: none;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.searchCard:hover {
+  opacity: 0.8;
+}
 
-  }
-  .searchCard:hover{
-      opacity: 0.8;
-  }
-  
+.searchImage {
+  border-radius: 10px;
+  background-color: azure;
+}
+
+@media (max-width: 560px) {
   .searchImage {
-    border-radius: 10px;
-    background-color: azure;
-
+    width: 90%;
+    height: auto;
   }
-  
-  @media (max-width: 560px) {
-    .searchImage {
-      width: 90%;
-      height: auto;
-    }
-  }
+}
