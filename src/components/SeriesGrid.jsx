@@ -13,7 +13,7 @@ export function SeriesGrid() {
   const apiKey = process.env.REACT_APP_TMDB_KEY;
 
   useEffect(() => {
-    peticion("/discover/tv?page=" + page).then((data) => {
+    peticion("/discover/tv?page=" + page + "&language=es-ES").then((data) => {
       console.log(data);
       setSeries((prevSeries) => prevSeries.concat(data.results));
       setHasMore(data.page < data.total_pages);

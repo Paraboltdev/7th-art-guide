@@ -9,14 +9,14 @@ export function LatestList() {
   const [series, setSeries] = useState([]);
 
   useEffect(() => {
-    peticion("/discover/movie").then((data) => {
+    peticion("/discover/movie?language=es-ES").then((data) => {
       console.log(data);
       setMovies(data.results);
     });
   }, []);
 
   useEffect(() => {
-    peticion("/discover/tv").then((data) => {
+    peticion("/discover/tv?language=es-ES").then((data) => {
       console.log(data);
       setSeries(data.results);
     });

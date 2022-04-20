@@ -20,8 +20,8 @@ export function ListaPeliculas() {
     setCargando(true);
 
     const searchUrl = search
-      ? "/search/movie?query=" + search + "&page=" + page
-      : "/discover/movie?page=" + page;
+      ? "/search/movie?query=" + search + "&page=" + page + "&language=es-ES"
+      : "/discover/movie?page=" + page + "&language=es-ES";
     peticion(searchUrl).then((data) => {
       setMovies((prevMovies) => prevMovies.concat(data.results));
       console.log(movies);

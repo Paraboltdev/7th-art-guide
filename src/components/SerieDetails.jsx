@@ -17,12 +17,11 @@ export function SerieDetails() {
   const { serieId } = useParams();
   console.log(serieId);
   useEffect(() => {
-    peticion("/tv/" + serieId).then((data) => {
+    peticion("/tv/" + serieId + "&language=es-ES").then((data) => {
       console.log(data);
       setSerie(data);
 
-      temporadas = data.seasons;
-      console.log(data.seasons);
+      
     });
   }, [serieId]);
 
@@ -73,12 +72,7 @@ export function SerieDetails() {
         </div>
 
         <div className="info_container">
-          <div className="seasons_div">
-            {/* <SliderCards seasons={serie.seasons} /> */}
-            {/* {serie.seasons.map((season, index)=>( */}
-            {/* <SeasonsCards key={index} season={season} /> */}
-            {/* )).reverse()} */}
-          </div>
+          
           <h2>Last episode:</h2>
           <div className="episode_div">
             <h3>

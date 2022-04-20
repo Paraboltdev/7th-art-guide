@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { Detalles } from "./Detalles";
+import { Detalles } from "./components/Detalles";
 import { PaginaEntrada } from "./components/PaginaEntrada";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { SeriesGrid } from "./components/SeriesGrid";

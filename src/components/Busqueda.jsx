@@ -24,19 +24,7 @@ export function Busqueda({ searchPage }) {
     navigate("/searchpage?search=" + textoBusqueda);
   };
 
-  const handleChange = (textoBusqueda) => {
-    // let matches =[]
-    // if(textoBusqueda.length> 0){
-    //     matches=info.filter(info =>{
-    //         const regex= new RegExp(`${textoBusqueda}`, "gi");
-    //         return info.match(regex)
-    //     })
-    // }
-    // console.log("matches", matches);
-    setSuggestions(textoBusqueda);
-    setTextoBusqueda(textoBusqueda);
-    console.log(textoBusqueda);
-  };
+ 
 
   return (
     <>
@@ -47,7 +35,7 @@ export function Busqueda({ searchPage }) {
             type="text"
             autofocus="true"
             value={textoBusqueda}
-            onChange={(e) => handleChange(e.target.value)}
+            onChange={(e) => setTextoBusqueda(e.target.value)}
           />
           <button className={style.botonBuscar} type="submit">
             <FaSearch size={25} />

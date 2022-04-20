@@ -1,10 +1,10 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { useParams } from "react-router";
-import { Spinner } from "./components/Spinner";
-import noImage from "./assets/img/no-image.png";
+import { Spinner } from "./Spinner";
+import noImage from "../assets/img/no-image.png";
 import style from "./Detalles.module.css";
 
-import { peticion } from "./components/utils/peticion";
+import { peticion } from "./utils/peticion";
 import { AiFillStar } from "react-icons/ai";
 
 export function Detalles() {
@@ -68,9 +68,7 @@ export function Detalles() {
           </div>
         </div>
         <div className={style.columnas}>
-          {/* <p><strong>Genero:</strong> {" "}
-             {movie.genres.map((genre)=> genre.name).join(', ')}        
-             </p> */}
+         
 
           <p> {movie.overview} </p>
         </div>
