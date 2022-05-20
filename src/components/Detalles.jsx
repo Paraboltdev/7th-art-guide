@@ -9,7 +9,7 @@ import { AiFillStar } from "react-icons/ai";
 
 export function Detalles() {
   const { movieId } = useParams();
-  console.log(movieId);
+ 
   const [cargando, setCargando] = useState(true);
   const [movie, setMovie] = useState(null);
 
