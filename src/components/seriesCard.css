@@ -18,20 +18,7 @@
   margin-left: 10px;
   margin-right: 10px;
 }
-/* .container{
-    display:grid;
-    justify-content: center;
-    align-items:left;
-    gap: 5px;
-    grid-template-columns: repeat(3 , 1fr);
-    background-color: rgba(128, 128, 128, 0.199);
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 3px -1px 3px 3px rgba(180, 179, 179, 0.74);
-   
-    
-    
-} */
+
 .title {
   display: flex;
   justify-content: center;
@@ -86,4 +73,91 @@
 .episode_div h3,
 h4 {
   margin-left: 10px;
+}
+
+@media (max-width:900px){
+  .main_div {
+   
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 140px;
+    margin-left: 10%;
+    margin-right: auto;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+  
+  .title {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 2px grey;
+  }
+  .imgcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    width: 70%;
+    
+  }
+  .imgcontent img{
+    width: 95%;
+  }
+  .p_rating {
+    font-size: 1.5em;
+    color: darkgoldenrod;
+    grid-area: "rate";
+  }
+  .info_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    
+  }
+ 
+  .text_div {
+    display: grid;
+  
+    align-items: center;
+    justify-content: center;
+   width: 80%;
+    background-color: rgba(44, 43, 43, 0.274);
+    font-size: 2rem;
+    border-radius: 10px;
+    grid-area: "info";
+  }
+  .seasons_div {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .episode_div {
+    display: flex;
+  
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(43, 42, 42, 0);
+    margin-bottom: 10px;
+    margin-top: -40px;
+    font-size: 1.2em;
+    border-bottom: solid 1px rgb(0, 89, 255);
+  }
+  .episode_div h3,
+  h4 {
+    margin-left: 10px;
+  }
 }

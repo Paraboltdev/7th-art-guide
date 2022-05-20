@@ -11,6 +11,18 @@
 .header_series {
   margin-left: 50px;
 }
+@media (max-width:900px) {
+  .header {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  padding-right: 40px;
+  
+  
+  }
+}
 
 @media (max-width: 560px) {
   .series_grid {

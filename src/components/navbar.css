@@ -2,36 +2,139 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+
   background-color: rgb(54, 54, 54);
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+
+  margin-bottom: 2%;
   position: sticky;
 }
+
 .navbar_title {
-  margin-left: 50px;
-  color:white;
- 
+  margin-left: 2%;
+  color: white;
+  font-size: 1.3rem;
+  display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   font-style: italic;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.link_div {
+span {
+  font-size: 1.2rem;
+  padding-bottom: 7px;
+  margin-left: 2px;
+}
+.nav_links {
   display: flex;
-  justify-content: start;
-  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  width: 70%;
+  margin-right: 50px;
+}
+.home,
+.Movies,
+.tvshows {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  
 }
 .link_div a {
   margin-left: 20px;
 }
-.link_div a:hover {
+.nav_links a:hover {
   color: #00fc00;
   transition: all 0.2s ease-in-out;
   transform: rotatex(360deg);
 }
 
 .search {
-  margin-right: 50px;
+  margin-right: 5%;
 }
 .active {
   color: #00fc00;
+}
+
+.btn_responsive {
+  display: none;
+}
+.nav_responsive {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(54, 54, 54);
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgb(54, 54, 54);
+
+  margin-bottom: 2%;
+  position: sticky;
+  }
+  .navbar_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+  span {
+    font-size: 1rem;
+    padding-bottom: 7px;
+    margin-left: 2px;
+  }
+  .nav_links {
+    display: none;
+  }
+  .nav_links_mobile {
+    position: absolute;
+    display: block;
+    
+    list-style: none;
+    background-color: rgb(54, 54, 54);
+    left: 0;
+    top:70px;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+  }
+  .home,
+  .Movies,
+  .tvshows {
+    color: white;
+    text-align: center;
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .link_div a {
+    margin-left: 20px;
+  }
+  
+
+  .search {
+  padding-bottom: 20px;
+ font-size: 80%;
+  }
+  .active {
+    color: #00fc00;
+  }
+  .btn_responsive {
+    display: block;
+    margin-right: 3%;
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+    color: white;
+  }
 }

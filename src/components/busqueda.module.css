@@ -8,12 +8,12 @@
 }
 
 .inputBuscar {
-  width: 300px;
-  height: 35px;
+  width: 85%;
+  height: 75%;
   border: solid 1px grey;
   background-color: black;
   color: gray;
-  /* border-radius: 10px; */
+  
   padding: 5px 50px 5px 10px;
   font-size: 1.5rem;
 }
@@ -33,4 +33,16 @@
   outline: none;
   border: solid 1px rgb(11, 153, 30);
   box-shadow: 1px 1px 5px rgb(22, 230, 143);
+}
+
+@media (max-width:900px){
+  .inputBuscar{
+    width: 75%;
+  height: 65%;
+  font-size: 1.2rem;
+  }
+  .botonBuscar{
+    margin-right: 15px;
+  margin-top: 2px;
+  }
 }

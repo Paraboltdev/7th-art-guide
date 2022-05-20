@@ -11,7 +11,7 @@ export function SeriesCaratula() {
   console.log(serieId);
   useEffect(() => {
     peticion("/tv/" + serieId).then((data) => {
-      console.log(data);
+     
       setSerie(data);
     });
   }, [serieId]);

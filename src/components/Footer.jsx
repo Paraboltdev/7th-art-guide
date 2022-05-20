@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <div className="footer_container">
       <p className="info">
-        Criticones<span>Information Guide</span>
+        7<span>th</span>Art guide
       </p>
 
       <ul className="footer_contact_list">
@@ -45,9 +45,9 @@ export function Footer() {
           </a>
         </li>
         <li>
-          <p>
+          <p className="info">
             <CgCopyright />
-            Criticones 2022
+            7<span>th</span>Art guide
           </p>
         </li>
       </ul>

@@ -18,10 +18,8 @@ export function SerieDetails() {
   console.log(serieId);
   useEffect(() => {
     peticion("/tv/" + serieId + "&language=es-ES").then((data) => {
-      console.log(data);
-      setSerie(data);
-
       
+      setSerie(data);
     });
   }, [serieId]);
 
@@ -50,6 +48,8 @@ export function SerieDetails() {
             </p>
             <p>
               Official Site:
+              </p>
+              <p>
               {serie.homepage ? (
                 <a
                   href={serie.homepage}
@@ -72,7 +72,6 @@ export function SerieDetails() {
         </div>
 
         <div className="info_container">
-          
           <h2>Last episode:</h2>
           <div className="episode_div">
             <h3>

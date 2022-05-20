@@ -10,14 +10,14 @@ export function LatestList() {
 
   useEffect(() => {
     peticion("/discover/movie?language=es-ES").then((data) => {
-      console.log(data);
+     
       setMovies(data.results);
     });
   }, []);
 
   useEffect(() => {
     peticion("/discover/tv?language=es-ES").then((data) => {
-      console.log(data);
+     
       setSeries(data.results);
     });
   }, []);

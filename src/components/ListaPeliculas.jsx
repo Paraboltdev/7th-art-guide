@@ -5,7 +5,7 @@ import { Spinner } from "./Spinner";
 import { peticion } from "./utils/peticion";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useLocation, useSearchParams } from "react-router-dom";
-import { SelectByLeter } from "./SelectByLeter";
+
 
 export function ListaPeliculas() {
   const [movies, setMovies] = useState([]);

@@ -13,10 +13,10 @@ export function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const search = searchParams.get("search");
-  console.log(info);
+  
   useEffect(() => {
     peticion("/search/multi?query=" + search).then((data) => {
-      console.log(data);
+     
       setSearchPage(data.results);
     });
   }, [search]);
@@ -25,7 +25,7 @@ export function SearchPage() {
     <div>
       <div>
         <h1 className="header">Peliculas</h1>
-        {/* mostrando {info.results.length} de {info.total_results} */}
+       
         <ul className="search_container">
           {searchPage
             .filter((item) => item.media_type === "movie")

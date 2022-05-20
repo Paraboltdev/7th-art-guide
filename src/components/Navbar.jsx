@@ -1,31 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink, useSearchParams } from "react-router-dom";
 import { Busqueda } from "./Busqueda";
 import "./navbar.css";
+import {GiHamburgerMenu} from 'react-icons/gi'
 
 export function Navbar() {
   const [searchParams, setSearchParams] = useSearchParams();
   const search = searchParams.get("search");
+  const [menuButton, setMenuButton]= useState(false)
+
+  const handleClose = ()=>{
+    setMenuButton(false)
+  }
  
   return (
-    <div className="navbar">
+    <nav className="navbar">
+    <div className="navbar_title">
+
     <Link to='/'>
-      <h1 className="navbar_title">Criticones</h1>
+      <h1>7<span>th</span> art guide</h1>
       </Link>
-      <div className="link_div">
-        <NavLink to="/" activeClassName="active">
-          Home
-        </NavLink>
-        <NavLink to="/peliculas" activeClassName="active">
-          Peliculas
-        </NavLink>
-        <NavLink to="/series" activeClassName="active">
-          Series
-        </NavLink>
-      </div>
-      <div className="search">
-        <Busqueda />
-      </div>
     </div>
+      <ul className={menuButton ?"nav_links_mobile" : "nav_links"}>
+
+     
+        <NavLink to="/" activeClassName="active"  className="home" onClick={handleClose}>
+         <li>Home</li> 
+         </NavLink>
+        <NavLink to="/peliculas" activeClassName="active" className="Movies"  onClick={handleClose}>
+         <li>Movies</li>
+        </NavLink>
+        <NavLink to="/series" activeClassName="active" className="tvshows" onClick={handleClose}>
+          <li>TV shows</li>
+        </NavLink>
+      <div className="search" >
+        <Busqueda handleClose={handleClose} setMenuButton={setMenuButton}/>
+      </div>
+      
+      </ul>
+      <button className="btn_responsive" onClick={()=>setMenuButton(!menuButton)}><GiHamburgerMenu /></button>
+     
+    </nav>
   );
 }

@@ -35,7 +35,7 @@ export function Detalles() {
   }
 
   const year = movie.release_date ? movie.release_date.slice(0, 4) : " Unknown";
-  console.log(year);
+  
   const imagenUrl = movie.poster_path
     ? "https://image.tmdb.org/t/p/w500" + movie.poster_path
     : noImage;
