@@ -21,7 +21,7 @@ export function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<PaginaEntrada />} />
+          <Route path="/github.io7th-art-guide" element={<PaginaEntrada />} />
           <Route path="/peliculas" element={<ListaPeliculas />} />
           <Route path="/movie/:movieId" element={<Detalles />} />
           <Route path="/series" element={<SeriesGrid />} />

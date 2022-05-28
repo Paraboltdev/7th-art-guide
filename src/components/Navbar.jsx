@@ -17,14 +17,14 @@ export function Navbar() {
     <nav className="navbar">
     <div className="navbar_title">
 
-    <Link to='/'>
+    <Link to='/github.io7th-art-guide'>
       <h1>7<span>th</span> art guide</h1>
       </Link>
     </div>
       <ul className={menuButton ?"nav_links_mobile" : "nav_links"}>
 
      
-        <NavLink to="/" activeClassName="active"  className="home" onClick={handleClose}>
+        <NavLink to="/github.io7th-art-guide" activeClassName="active"  className="home" onClick={handleClose}>
          <li>Home</li> 
          </NavLink>
         <NavLink to="/peliculas" activeClassName="active" className="Movies"  onClick={handleClose}>
